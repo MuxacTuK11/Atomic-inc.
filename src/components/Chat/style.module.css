@@ -1,0 +1,135 @@
+.siteHeader {
+    border-bottom: 3px dashed hsl(186 100% 69%);
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(0deg, #000000, hsl(186, 58%, 20%));
+}
+.siteIdentity h1 {
+    font-size: 1.5em;
+    margin: 0.8em 0;
+    display: inline-block;
+}
+.Applogo {
+  height: 80px;
+}
+.siteNavigation{
+  display: flex;
+  flex-direction: row;
+}
+.siteNavigation ul,
+.siteNavigation li {
+  margin: 0;
+  padding: 0;
+}
+.siteNavigation li {
+  display: inline-block;
+  margin: 1.4em 1em 1em 1em;
+}
+.HeaderText{
+    color: hsl(186 100% 69%);
+    font-size: 50px;
+    float: left;
+    margin-left: 160px;
+    -webkit-text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3),
+      0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em var(--glow-color);
+      
+} 
+.Link{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(132, 151, 151);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Applogo {
+      animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+ @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+.box{
+    display: flex;
+    justify-content: center;
+}
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: hsl(186 100% 69%);
+  background: linear-gradient(0deg, #000000, hsl(186, 58%, 20%));
+  border-radius: 20px;
+  border: 3px dashed hsl(186 100% 69%);
+  height: 850px;
+  width: 700px;
+  font-size: 30px;
+  margin-top: 30px;
+  -webkit-text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em var(--glow-color); 
+}
+.message{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content:space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 600px;
+    height: auto;
+    margin-top: 5px;
+    border: 4px solid rgb(33, 210, 237);
+    border-radius: 25px;
+    background: #13292d;
+}
+.messContent{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 700px;
+  font-size: 20px;
+}
+.deleteMess{
+  width: 30px;
+  height: 30px;
+}
+.inputMess{
+  display: flex;
+  position: absolute;
+  margin-top: 750px;
+}
+.glowingInp {
+      color: var(--glow-color);
+      width: 550px;
+      height: 50px;
+      cursor: pointer;
+    padding: 0.02em 0.3em;
+    border: 0.05em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    font-family: "Raleway", sans-serif;
+    font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 5px;
+    
+}
+
+
+
+

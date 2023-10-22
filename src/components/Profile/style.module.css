@@ -1,0 +1,316 @@
+.HeaderText{
+  color: hsl(186 100% 69%);
+  font-size: 50px;
+  float: left;
+    margin-left: 160px;
+    -webkit-text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3),
+      0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3),
+      0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em var(--glow-color);  
+}
+.Applogo {
+    height: 80px; 
+}
+.siteNavigation ul,
+.siteNavigation li {
+    margin: 0;
+    padding: 0;
+}
+.siteNavigation li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+}
+.siteIdentity h1 {
+    font-size: 1.5em;
+    margin: 0.6em 0;
+    display: inline-block;
+}
+.Link{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(132, 151, 151);
+}
+.siteHeader {
+    border-bottom: 3px dashed hsl(186 100% 69%);
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(0deg, #000000, hsl(186, 58%, 20%));
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(186 100% 69%);
+    font-size: 100px;
+    margin-right: -0.8em;
+    
+}
+.userCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    border: 3px dashed hsl(186 100% 69%);
+    border-radius: 25px;
+    background: linear-gradient(0deg, #000000, hsl(186, 58%, 20%));;
+    padding: 50px;
+    margin-top: 100px;
+}
+.headInfoUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.userImg{
+    width: 200px;
+    height: 200px;
+    border: 4px dashed hsl(186, 100%, 69%) ;
+    border-radius: 50%;
+}
+.userName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.userInfo{
+    font-size: 40px;
+}
+.logOutBtn{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-bottom: -30px;
+}
+
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+html,
+body {
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+.glowingBtn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  width: 270px;
+  height: 90px;
+  padding: 0.1em 0.3em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing:10px;
+  margin-bottom: 10px;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+.glowingTxt {
+  float: left;
+  font-size: 40px;
+  margin-right: -0.4em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faultyLetter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowingBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowingBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowingBtn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowingBtn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowingBtn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowingBtn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowingBtn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowingBtn{
+    font-size: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+  
