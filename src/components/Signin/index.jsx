@@ -24,6 +24,13 @@ export const SignIn = () => {
   const storedEmail = user ? user['Email'] : '';
   const storedPassword = user ? user['Password'] : '';
 
+  const handleAlertClick = (e) => {
+    if (!showLoginButton) {
+      e.preventDefault();
+      alert('Данные о пользователе отсутствуют, пожалуйста зарегестрируйтесь');
+    } 
+  };
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -60,18 +67,18 @@ return(
                         <h2><span>ВХ<span>О</span>Д:</span></h2>                       
                         </div>                     
                                 <div>
-                                <input type="email" id="email" value={email} onChange={handleEmailChange} className={styles.glowingInp}  /> 
+                                <input type="email" placeholder="E-mail" id="email" value={email} onChange={handleEmailChange} className={styles.glowingInp}  /> 
                                   
                         
-                                <input type="password" id="password" value={password} onChange={handlePasswordChange} className={styles.glowingInp} />
+                                <input type="password" placeholder="Password" id="password" value={password} onChange={handlePasswordChange} className={styles.glowingInp} />
                                 </div>
                     <div>
                         <div className={styles.signBtn}>
                             <Link to="/home">
                             {showLoginButton && <button class={styles.glowingBtn}><span class={styles.glowingTxt}>SI<span class={styles.faultyLetter}>GN</span>IN</span></button>}
                             </Link>
-                            {!showLoginButton && <div><h3>Введите E-mail и пороль</h3>
-                                                        <h3>"Кнопка входа появится тут"</h3></div>}
+                            {!showLoginButton && <button onClick={handleAlertClick} class={styles.glowingBtn}><span class={styles.glowingTxt}>SI<span class={styles.faultyLetter}>GN</span>IN</span></button>}
+                            <div className={styles.regPromt}>Если у вас нет аккаунта пожалуйста <Link to='/login'> зарегестрируйтесь </Link></div>
                         </div>
                     </div>
                 </div>

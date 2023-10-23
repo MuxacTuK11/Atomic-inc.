@@ -12,6 +12,10 @@
 .Applogo {
     height: 80px; 
 }
+.siteNavigation{
+  display: flex;
+  flex-direction: row;
+}
 .siteNavigation ul,
 .siteNavigation li {
     margin: 0;
